@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=IBM+Plex+Mono:wght@200&family=Roboto+Mono&display=swap');
+
+
+
+.container {
+  width:100vw;
+  margin: 0 auto;    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.navbar {
+  height: 120px;
+  
+  position: relative;
+}
+
+.logo {
+}
+
+.menu-icon {
+  display: none;
+}
+
+.nav-elements {
+}
+
+.nav-elements ul {
+    
+    font-family: 'Roboto Mono', monospace;
+    font-size: 28px;
+    font-weight: 200;
+    color : white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+ 
+}
+
+.nav-elements ul li:not(:last-child) {
+  margin-right: 140px;
+
+}
+.nav-elements ul li:hover{
+    color: #FF5F6D;   
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+
+.nav-elements ul a {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 28px;
+    font-weight: 200;
+  color: #2f234f;
+  text-decoration: none;
+}
+
+.nav-elements ul a.active {
+  color: #574c4c;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-elements ul a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #574c4c;
+}
+
+.bar_edit{
+  position: relative;
+}
+@media (max-width: 1176px) {
+  .nav-elements ul li:not(:last-child) {
+    margin-right: 120px;
+  }
+}
+@media (max-width: 1240px) {
+    .nav-elements ul {
+        font-size: 24px;
+    }
+  }
+
+@media (max-width: 1090px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-elements {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    
+    width: 0px;
+    height: calc(100vh - 60px);
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+  }
+
+  .nav-elements.active {
+    width: 270px;
+  }
+
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-elements ul li {
+    margin-right: unset;
+    margin-top: 22px;
+  }
+}
