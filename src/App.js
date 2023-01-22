@@ -3,6 +3,7 @@ import axios from 'axios';
 import Leetcode from './Components/LeetcodeDash/Leetcode';
 import Navbar from './Components/NavBar/Navbar';
 import './Components/Main.css'
+import AboutMe from './Components/AboutMe/AboutMe';
 
 const App = () => {
 
@@ -12,6 +13,7 @@ const App = () => {
     
       <>
         <Navbar/>
+        <AboutMe/>
       </>
     
   )

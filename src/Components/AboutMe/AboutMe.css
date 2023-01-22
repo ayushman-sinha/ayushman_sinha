@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=IBM+Plex+Mono:wght@200&family=Roboto+Mono&family=Source+Sans+Pro&display=swap');
+.main_container_aboutme{
+    display: flex;
+    flex-direction: row; 
+    width: 100vw;  
+    margin-top:20px; /* Caution .*/
+    padding-left: 40px;
+    padding-right: 60px;
+}
+.section_one_about_me{       
+    height: 500px;
+    display: flex;
+    flex-direction: column;     
+    flex:2; 
+    justify-content: center;
+    align-items: center;
+    
+    position: relative;    
+    gap:40px;
+    /* background-color: #73d821; */
+}
+.section_two_about_me{   
+    height: 500px;
+    display: flex;
+    flex-direction: column;    
+    flex:2;   
+    justify-content: center;
+    align-items: center;
+    margin-right:-60px;
+
+    /* background-color: #FF5F6D; */
+}
+
+.self_picture{
+    width: 230px;
+    margin-bottom: -50px;
+    
+}
+.about_me_heading{
+    display: flex;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 40px;
+    letter-spacing: 3px;
+    color : white;
+    position: relative;
+    margin-left:-30px;
+    
+}
+.about_me_text{
+    width: 500px;
+    height:auto;
+    display: flex;
+    font-size:20px;
+    color : white;
+    font-family: 'IBM Plex Mono', monospace;
+    position: relative;
+    
+}
+
+
+.rectangle1{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 176px;
+    height: 55px;   
+    margin-left:-340px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    color : white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.493);
+    background: #FF5F6D;
+    box-shadow: 2px 4px 4px 5px rgba(115, 111, 111, 0.25);
+    border-radius: 18px;
+}
+.rectangle1:hover{  
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    background: #fa1776;
+    box-shadow: 2px 4px 4px 5px rgba(115, 111, 111, 0.25);
+    border-radius: 18px;
+ }
+
+@media (max-width: 768px) {
+    .main_container_aboutme{
+        flex-direction: column;
+        padding-left: initial;
+        padding-right:initial;
+        
+    }
+    .section_one_about_me{    
+        flex:initial;
+        width: 100vw;
+        padding: 40px;
+        margin-left:initial
+    }
+    .section_two_about_me{    
+        flex:initial;
+    }
+    .about_me_heading{
+        font-size:32px;
+        margin-left:-55px;
+    }
+    .about_me_text{
+        font-size:18px;
+        width: 400px;
+    }
+    .rectangle1{
+        margin-left:-240px;
+    }
+}
