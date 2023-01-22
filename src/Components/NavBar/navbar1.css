@@ -4,11 +4,13 @@
 
 .container {
   width:100vw;
-  margin: 0 auto;    
+  margin: 0px auto;    
   display: flex;
   justify-content: center;
   align-items: center;
- 
+  position: relative;
+ z-index: 9;
+
 }
 
 .navbar {
@@ -80,6 +82,7 @@
   color:'white';
   right:-42vw;
   top:20px;
+  z-index: 9;
 }
 .bar_edit:hover{
   color: #FF5F6D;   
@@ -93,7 +96,7 @@
 }
 @media (max-width: 1280px) {
     .nav-elements ul {
-        font-size: 24px;
+        font-size: 26px;
     }
   }
 

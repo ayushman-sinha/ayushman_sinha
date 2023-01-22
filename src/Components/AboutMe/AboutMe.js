@@ -2,10 +2,16 @@ import React from 'react'
 import './AboutMe.css'
 import selfPicture from '../Images/self.png'
 import Typewriter from 'typewriter-effect';
+import Blob from '../Images/Blob.svg'
+
+
+
 
 const AboutMe = () => {
+        
   return (
     <div className='main_container_aboutme'>
+       
         <div className='section_one_about_me'>
             <div className='about_me_heading'>
                 I am &nbsp;
@@ -25,9 +31,12 @@ const AboutMe = () => {
                 My Resume
             </button>
         </div>
+        
         <div className='section_two_about_me'>
             <img src={selfPicture} alt='myPicture' className='self_picture'/>
+            <img src={Blob} alt='blob' className='blob'/>
         </div>
+       
     </div>
   )
 }
