@@ -37,6 +37,7 @@
 
 .self_picture{
     width: 360px;
+    transition: 0.3s ease-in-out;
 }
 .blob{
     display: flex;
@@ -45,6 +46,9 @@
     width: 900px;;
     
 }
+/* .self_picture:hover {
+    transform: translate3d(0, -10px, 0);
+  } */
 .about_me_heading{
     display: flex;
     font-family: 'Source Sans Pro', sans-serif;

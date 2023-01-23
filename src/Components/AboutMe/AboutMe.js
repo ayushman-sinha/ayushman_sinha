@@ -1,4 +1,4 @@
-import React from 'react'
+import {useEffect,useState} from 'react'
 import './AboutMe.css'
 import selfPicture from '../Images/self.png'
 import Typewriter from 'typewriter-effect';
@@ -8,7 +8,26 @@ import Blob from '../Images/Blob.svg'
 
 
 const AboutMe = () => {
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const [isHovered, setIsHovered] = useState(false);
+
+    // const [mousePos, setMousePos] = useState({});
+
+    // useEffect(() => {
+    //   const handleMouseMove = (event) => {
+    //     setMousePos({ x: event.clientX, y: event.clientY });
+    //   };
+  
+    //   window.addEventListener('mousemove', handleMouseMove);
+     
+    //   return () => {
+    //     window.removeEventListener(
+    //       'mousemove',
+    //       handleMouseMove
+    //     );
         
+    //   };
+    // }, []);
   return (
     <div className='main_container_aboutme'>
        
@@ -33,7 +52,18 @@ const AboutMe = () => {
         </div>
         
         <div className='section_two_about_me'>
-            <img src={selfPicture} alt='myPicture' className='self_picture'/>
+            <img src={selfPicture} alt='myPicture'  className={` self_picture moving-image ${isHovered ? 'hovered' : ''}`}            
+            style={{ transform: `translate(${mousePosition.y*-0.015}px, ${mousePosition.x*-0.025}px)` }}
+            onMouseMove={(event) => {
+                if (isHovered) {
+                  setMousePosition({ x: event.clientX, y: event.clientY });
+                }
+            }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => {
+                setIsHovered(false);
+                setMousePosition({ x: 0, y: 0 });
+            }}/>
             <img src={Blob} alt='blob' className='blob'/>
         </div>
        

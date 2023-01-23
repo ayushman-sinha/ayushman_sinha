@@ -24,6 +24,14 @@
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 1200px){
     .list_edit{
         flex-direction: column;
