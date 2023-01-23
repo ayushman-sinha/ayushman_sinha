@@ -51,10 +51,19 @@
   margin-right: 120px;
 
 }
-.nav-elements ul a:hover{
+.nav-elements ul li:hover{
+    transform:scale(1.1);
     color: #FF5F6D;   
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;   
+    
+  }
+  .nav-elements ul a:hover{
+    
+    color: #FF5F6D;   
+    cursor: pointer;
+    transition:all 0.3s ease-in-out;   
+    
   }
 
 .nav-elements ul a {
@@ -64,11 +73,6 @@
     color : white;
     text-decoration: none;
 }
-.nav-elements ul a :focus{
-    color: #FF5F6D;   
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-  }
 
 .nav-elements ul a.active {
   color: #574c4c;

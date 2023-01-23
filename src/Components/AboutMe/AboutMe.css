@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=IBM+Plex+Mono:wght@200&family=Roboto+Mono&family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=IBM+Plex+Mono:wght@200&family=Oswald:wght@500&family=Roboto+Mono&family=Source+Sans+Pro&display=swap');
 .main_container_aboutme{
     display: flex;
     flex-direction: row; 
@@ -38,6 +38,7 @@
 .self_picture{
     width: 360px;
     transition: 0.3s ease-in-out;
+    z-index: 8;
 }
 .blob{
     display: flex;
@@ -70,7 +71,20 @@
     
 }
 
+.large_text{
+    display: flex;
+    font-size: 160px;
+    line-height: 180px;
+    font-family: 'Oswald', sans-serif;
+    z-index: -4;
+    color : rgba(87, 87, 87, 0.253);
+    position: absolute;
+    margin-bottom: 280px;
+    margin-right: 1800px;
+    justify-content: flex-end;
+    align-items: flex-end;
 
+}
 .rectangle1{    
     display: flex;
     justify-content: center;

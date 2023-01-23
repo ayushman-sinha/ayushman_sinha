@@ -17,13 +17,18 @@ import {
 
 
 
+
 const App = () => {
 
   
   return (    
     <BrowserRouter>
+      
       <Navbar/>
+      
+      
       <Routes>
+        
         <Route path="/" element={<AboutMe/>}/>
         <Route path="/skills" element={<Skills/>}/>
         <Route path="/projects" element={<Projects/>}/>

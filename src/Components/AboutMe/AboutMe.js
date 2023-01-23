@@ -52,18 +52,10 @@ const AboutMe = () => {
         </div>
         
         <div className='section_two_about_me'>
-            <img src={selfPicture} alt='myPicture'  className={` self_picture moving-image ${isHovered ? 'hovered' : ''}`}            
-            style={{ transform: `translate(${mousePosition.y*-0.015}px, ${mousePosition.x*-0.025}px)` }}
-            onMouseMove={(event) => {
-                if (isHovered) {
-                  setMousePosition({ x: event.clientX, y: event.clientY });
-                }
-            }}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => {
-                setIsHovered(false);
-                setMousePosition({ x: 0, y: 0 });
-            }}/>
+        <div className='large_text'>
+            Ayushman &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sinha
+       </div>
+            <img src={selfPicture} alt='myPicture'  className= 'self_picture'/>
             <img src={Blob} alt='blob' className='blob'/>
         </div>
        
