@@ -14,28 +14,29 @@ import {
   Router,
 } from "react-router-dom";
 
+import Blob1 from './Components/Images/Blob3.svg'
 
-
+import Blob2 from './Components/Images/Blob4.svg'
 
 
 const App = () => {
-
-  
   return (    
-    <BrowserRouter>
-      
-      <Navbar/>
-      
-      
-      <Routes>
+    <BrowserRouter >     
+    <img src={Blob1} alt='blob' className='blob1'/>
+      <div className='outer_div'>
         
+      <Navbar/>     
+      <Routes>
         <Route path="/" element={<AboutMe/>}/>
         <Route path="/skills" element={<Skills/>}/>
         <Route path="/projects" element={<Projects/>}/>
         <Route path="/contact" element={<ContactMe/>}/>
         <Route path="/coding" element={<Leetcode/>}/>
       </Routes>
+      </div>
+      <img src={Blob2} alt='blob' className='blob2'/>
     </BrowserRouter>
+
   )
 }
 

@@ -8,5 +8,34 @@ body{
     padding: 0;
     overflow-x: hidden;
     overflow-y: hidden;
+    /* From https://css.glass */
     
+}
+.outer_div{
+    background: rgba(39, 39, 39, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    width: 100vw;
+    height: 100vh;
+    z-index: -46;
+}
+
+.blob1{
+    position: absolute;
+    top: -600px;
+    left: 500px;
+    width: 800px;
+    z-index: -16;
+  
+}
+
+.blob2{
+    position: absolute;
+    top: 800px;
+    left: 300px;
+    width: 500px;
+    z-index: -16;
+  
 }
