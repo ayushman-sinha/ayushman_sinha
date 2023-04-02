@@ -16,10 +16,7 @@ import {
 } from "react-router-dom";
 
 import Blob1 from './Components/Images/Blob3.svg'
-
 import Blob2 from './Components/Images/Blob4.svg'
-
-
 const App = () => {
   return (    
     <BrowserRouter >     
