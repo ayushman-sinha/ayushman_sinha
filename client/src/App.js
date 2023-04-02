@@ -34,7 +34,7 @@ const App = () => {
         <Route path="/contact" element={<ContactMe/>}/>
         <Route path="/coding" element={<Coding/>}/>
       </Routes>
-      </div>
+      </div> 
       <img src={Blob2} alt='blob' className='blob2'/>
     </BrowserRouter>
 
