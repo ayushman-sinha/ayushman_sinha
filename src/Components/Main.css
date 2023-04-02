@@ -3,23 +3,25 @@ body{
     flex-direction: column;
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
     background-color: #000000;   
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    /* From https://css.glass */
-    
+   
 }
 .outer_div{
-    background: rgba(39, 39, 39, 0.2);
+    /* Caution */
+    /* background: rgba(39, 39, 39, 0.2);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
-    width: 100vw;
-    height: 100vh;
-    z-index: -46;
+    /* width: 100vw; */
+   
+    
+    display: flex;
+    flex-direction: column;
+   
 }
 
 .blob1{
@@ -28,14 +30,43 @@ body{
     left: 500px;
     width: 800px;
     z-index: -16;
-  
+    
 }
 
 .blob2{
-    position: absolute;
-    top: 800px;
+
+    position:fixed;
+    top: 750px;
     left: 300px;
     width: 500px;
     z-index: -16;
   
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  @media screen and (max-width: 768px) {
+    
+    .blob2{
+        display: none;
+    }
+  }
+    
+  

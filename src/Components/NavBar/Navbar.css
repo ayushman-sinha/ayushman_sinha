@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=IBM+Plex+Mono:wght@200&family=Roboto+Mono&display=swap');
+.navbar{
+    position: fixed;
+}
 .list_edit{
     display: flex;
     flex-direction: row;

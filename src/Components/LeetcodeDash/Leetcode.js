@@ -16,7 +16,7 @@ const Leetcode = () => {
       getProfile();
     },[]);
   return (
-    <div>{JSON.stringify(profile)}</div>
+    <div style={{color : `white`}}>{JSON.stringify(profile)}</div>
   )
 }
 

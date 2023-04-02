@@ -123,7 +123,17 @@ signed main(){
 //     }
 // }
 // /**
- 
+   int c=0;int div=0;
+        for(int i=1;i<=children;i++){
+            int cur_group=i*8;
+            int rest_group=money-cur_group;
+            
+            if(rest_group<(children-i)||(rest_group==4&&(children-i)==1)) break;
+            if(rest_group>0&&i==children) break;
+            c=i;
+            
+        }
+        return c;
 
 // 13 15
 // 1 2

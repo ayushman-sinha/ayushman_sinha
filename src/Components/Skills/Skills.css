@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=IBM+Plex+Mono:wght@200&family=Oswald:wght@500&family=Roboto+Mono&family=Source+Sans+Pro&display=swap');
+
+.skill_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;    
+    width: 70vw;
+    height: 600px;
+    padding: 40px;
+
+}
+.skill_container_inner{
+    display: flex;
+    flex-direction: column;
+    
+    align-items:left;
+    justify-content: center;
+    
+    width: 800px;
+    height: 600px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.025);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+    padding: 0px 100px 0px 100px;
+    z-index : 2;
+}
+.skill_container_inner_left{
+    display: flex;
+    flex:1;
+    width: 10vw;
+    height: 500px;
+    position: relative;
+    background-color:blue;
+}
+
+.skill_container_inner_right{
+    display: flex;
+    flex: 2;
+    width:10vw;
+    height: 500px;
+    background-color: aqua;
+}
+.list_skills{
+    list-style: none;
+}
+.skill_container_heading{
+    width:240px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 24px;
+    color : rgb(232, 229, 229);
+}
+.skill_container_heading:hover{
+    color: #FF5F6D;
+    transform:scale(1.01);
+    transition:ease-in-out;
+    cursor: pointer;
+}
+.large_text_skills{
+    display: flex;
+    font-size: 160px;
+    line-height: 180px;
+    font-family: 'Oswald', sans-serif;
+    z-index: 99;
+    color : rgba(87, 87, 87, 0.253);
+    position: absolute;
+    /* margin-bottom: 160px; */
+    margin-left:-620px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    animation: 2s ease-in-out 0s 1  zoomIn;
+
+}
+@keyframes zoomIn{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.skill_container_content{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    gap:130px;
+    
+}
+.skill_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 300px;
+    height: 23px;
+    border-radius: 8px;
+    background: rgb(36,33,38);
+    background: linear-gradient(90deg, rgba(36,33,38,1) 29%, rgba(91,84,74,1) 74%, rgba(108,101,91,1) 100%);
+    z-index : 10;
+}
+.skill_box_1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self:flex-start;
+    width: 260px;
+    height: 23px;
+    border-radius: 8px 4px 4px 8px;
+    background-image: linear-gradient( 109.6deg,  rgb(252, 40, 40) 11.2%, rgba(234,192,117,1) 78% );
+    background-size:200% 400%;
+    animation: 2s ease-in-out 0s 1 slideInFromLeft, 2.8s infinite ease-in-out changeColor;
+    z-index: 8;
+    
+}
+
+.skill_box_2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self:flex-start;
+    width: 230px;
+    height: 23px;
+    border-radius: 8px 4px 4px 8px;
+    background-image: linear-gradient( 109.6deg,  rgba(245,56,56,1) 11.2%, rgba(234,192,117,1) 78% );
+    background-size:200% 400%;
+    animation: 2s ease-in-out 0s 1 slideInFromLeft, 2.3s infinite ease-in-out changeColor;
+    z-index: 18;
+    position: relative;
+    
+}
+.skill_box_3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self:flex-start;
+    width: 240px;
+    height: 23px;
+    border-radius: 8px 4px 4px 8px;
+    background-image: linear-gradient( 109.6deg,  rgba(245,56,56,1) 11.2%, rgba(234,192,117,1) 78% );
+    background-size:200% 400%;
+    animation: 2s ease-in-out 0s 1 slideInFromLeft, 3s infinite ease-in-out changeColor;
+    z-index: 18;
+    position: relative;
+    
+}
+.skill_box_4{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self:flex-start;
+    width: 270px;
+    height: 23px;
+    border-radius: 8px 4px 4px 8px;
+    background-image: linear-gradient( 109.6deg,  rgba(245,56,56,1) 11.2%, rgba(234,192,117,1) 78% );
+    background-size:200% 400%;
+    animation: 2s ease-in-out 0s 1 slideInFromLeft, 2.14s infinite ease-in-out changeColor;
+    z-index: 18;
+    position: relative;
+    
+}
+.skill_box_5{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self:flex-start;
+    width: 210px;
+    height: 23px;
+    border-radius: 8px 4px 4px 8px;
+    background-image: linear-gradient( 109.6deg,  rgba(245,56,56,1) 11.2%, rgba(234,192,117,1) 78% );
+    background-size:200% 400%;
+    animation: 2s ease-in-out 0s 1 slideInFromLeft, 2.5s infinite ease-in-out changeColor;
+    z-index: 18;
+    position: relative;
+    
+}
+.skill_box_6{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self:flex-start;
+    width: 235px;
+    height: 23px;
+    border-radius: 8px 4px 4px 8px;
+    background-image: linear-gradient( 109.6deg,  rgba(245,56,56,1) 11.2%, rgba(234,192,117,1) 78% );
+    background-size:200% 400%;
+    animation: 2s ease-in-out 0s 1 slideInFromLeft, 2.64s infinite ease-in-out changeColor;
+    z-index: 18;
+    
+}
+/* Cause the gradient to move dynamically*/
+@keyframes changeColor {
+    0% {
+        background-position: 0% 50%; 
+        width: set-width;
+    }
+    50% {
+        background-position: 100% 50%;
+        width: calc(set-width + 10px);
+    }
+    100% {
+        background-position: 0% 50%;
+        
+    }
+}
+@keyframes slideInFromLeft {
+    0% {
+        width: 0;
+    }
+    
+    100% {
+        width: set-width;        
+    }
+}
+
+.list_edit_skill{
+    list-style: none;
+    
+}
+
+@media (max-width: 868px) {
+   .skill_container{
+        flex-direction: column;
+        align-items: center;
+       z-index: 1;
+        width: 100%;
+       
+   }
+   .skill_container_inner{
+    display: none;
+   }
+
+    .skill_container_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap:20px;
+       
+       
+    }
+    .skill_container_inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:80px;
+        width: 100%;
+       
+        
+    }
+    .large_text_skills{
+        font-size: 80px;
+        margin-left: 0px;
+        z-index: 0 ;
+    }
+
+
+}

@@ -11,7 +11,10 @@ const Navbar = () => {
   }
   let activeStyle = {
     color:'#FF5F6D',
-   
+    textShadow:'2px 2px 8px black',
+    
+
+
   };
   return (
     <nav className="navbar">
