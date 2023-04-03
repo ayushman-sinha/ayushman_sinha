@@ -46,7 +46,7 @@ const Coding = () => {
   },[]);
   //Fire this useEffect only when profile is updated
   useEffect(() => {
-    //console.log("UseEffect 2");
+    console.log("UseEffect 2");
     if(profile.data){
       let flag=false;
         for(let i=0;i<profile.data.userContestRankingHistory.length;i++){
