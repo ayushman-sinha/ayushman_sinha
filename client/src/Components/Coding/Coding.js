@@ -219,7 +219,7 @@ const Coding = () => {
       {profile.data&&profile2.length>0?<div className='main_container_coding_inner'>
       <div className='leetcode_container'>
             <div className='leetcode_heading'>Leetcode</div>
-              {data&&<Line data={data} options={options}/>}  
+              <Line data={data} options={options}/>  
               <div className='leetcode_description'>
                  <div className='left_column_leetcode'>
                     <div className='leetcode_stats_label'>Current Rating : <div className='leetcode_stats_text'> {profile.data&&(profile.data.userContestRanking.rating).toFixed(2)}</div></div>
@@ -238,7 +238,7 @@ const Coding = () => {
     </div>
     <div className='codeforces_container'>
             <div className='leetcode_heading'>Codeforces</div>
-            {data2&&<Line data={data2} options={options2}/>}
+            <Line data={data2} options={options2}/>
             <div className='codeforces_description'>
                   <div className='left_column_codeforces'>
                     <div className='leetcode_stats_label'>Current Rating : <div className='leetcode_stats_text'> {profile2.length>0?profile2[1].result[0].rating:<></>}</div></div>
