@@ -45,6 +45,7 @@ const Coding = () => {
   },[]);
   //Fire this useEffect only when profile is updated
   useEffect(() => {
+    console.log("UseEffect 2");
     if(profile.data){
       let flag=false;
         for(let i=0;i<profile.data.userContestRankingHistory.length;i++){
@@ -54,7 +55,7 @@ const Coding = () => {
           if(flag===true){
             let date = new Date(profile.data.userContestRankingHistory[i].contest.startTime*1000);
             let newDate = monthName[date.getMonth()] + "," + date.getFullYear();
-            console.log(newDate);
+           
             setXaxis((Xaxis)=>[...Xaxis,profile.data.userContestRankingHistory[i].rating]);            
             setYaxis((Yaxis)=>[...Yaxis,newDate]);
             setContestName((contestName)=>[...contestName,profile.data.userContestRankingHistory[i].contest.title]);
