@@ -3,7 +3,7 @@ import './Coding.css'
 import { Lines } from 'react-preloaders';
 import axios from 'axios';
 import {Line} from 'react-chartjs-2'
-import {Chart as ChartJS, Title, Legend, LineController, LineElement, PointElement, LinearScale, CategoryScale, Tooltip} from 'chart.js'
+import {Chart as ChartJS, Title, Legend, LineController, LineElement, PointElement, LinearScale, CategoryScale, Tooltip} from 'chart.js/auto'
 ChartJS.register(Title, Legend, LineController, LineElement, PointElement, LinearScale, CategoryScale, Tooltip)
 
 
@@ -53,7 +53,7 @@ const Coding = () => {
         for(let i=0;i<profile.data.userContestRankingHistory.length;i++){
           if(profile.data.userContestRankingHistory[i].contest.startTime===1632623400)
             flag=true;
-          console.log(profile.data.userContestRankingHistory[i].rating);
+          //console.log(profile.data.userContestRankingHistory[i].rating);
           if(flag===true){
             let date = new Date(profile.data.userContestRankingHistory[i].contest.startTime*1000);
             let newDate = monthName[date.getMonth()] + "," + date.getFullYear();
