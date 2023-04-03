@@ -1,0 +1,5 @@
+{
+    "appService.showBuildDuringDeployPrompt": false,
+    "appService.defaultWebAppToDeploy": "/subscriptions/9050a519-9fea-4f0f-b6b2-941b96744529/resourceGroups/ayushman-portfolio/providers/Microsoft.Web/sites/ayushman",
+    "appService.deploySubpath": "api"
+}
