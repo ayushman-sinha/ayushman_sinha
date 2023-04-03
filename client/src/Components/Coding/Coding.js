@@ -32,12 +32,12 @@ const Coding = () => {
       //Fetch Leetcode stats
       const response=await axios.get('https://ayushman-sinha-yc4d.vercel.app/api/routes/leetcode').then((response)=>{
         setProfile(response.data); 
-        window.localStorage.setItem('leetcode',JSON.stringify(response.data));
+       // window.localStorage.setItem('leetcode',JSON.stringify(response.data));
       });
       //Fetch codeforces stats
       const response2 = await axios.get('https://ayushman-sinha-yc4d.vercel.app/api/routes/leetcode/codeforces').then((response2)=>{
         setProfile2(response2.data);     
-        window.localStorage.setItem('codeforces',JSON.stringify(response2.data));      
+        //window.localStorage.setItem('codeforces',JSON.stringify(response2.data));      
       });
     }    
     getProfile();
@@ -54,7 +54,7 @@ const Coding = () => {
           if(flag===true){
             let date = new Date(profile.data.userContestRankingHistory[i].contest.startTime*1000);
             let newDate = monthName[date.getMonth()] + "," + date.getFullYear();
-          
+            console.log(newDate);
             setXaxis((Xaxis)=>[...Xaxis,profile.data.userContestRankingHistory[i].rating]);            
             setYaxis((Yaxis)=>[...Yaxis,newDate]);
             setContestName((contestName)=>[...contestName,profile.data.userContestRankingHistory[i].contest.title]);
