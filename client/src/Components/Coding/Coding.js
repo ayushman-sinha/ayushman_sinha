@@ -30,12 +30,12 @@ const Coding = () => {
   useEffect(()=>{
     const getProfile=async()=>{
       //Fetch Leetcode stats
-      const response=await axios.get('http://localhost:3500/api/routes/leetcode').then((response)=>{
+      const response=await axios.get('https://ayushman-sinha-yc4d.vercel.app/api/routes/leetcode').then((response)=>{
         setProfile(response.data); 
         window.localStorage.setItem('leetcode',JSON.stringify(response.data));
       });
       //Fetch codeforces stats
-      const response2 = await axios.get('http://localhost:3500/api/routes/leetcode/codeforces').then((response2)=>{
+      const response2 = await axios.get('https://ayushman-sinha-yc4d.vercel.app/api/routes/leetcode/codeforces').then((response2)=>{
         setProfile2(response2.data);     
         window.localStorage.setItem('codeforces',JSON.stringify(response2.data));      
       });
