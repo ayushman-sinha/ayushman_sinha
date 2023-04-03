@@ -49,6 +49,7 @@ const Coding = () => {
     console.log("UseEffect 2");
     if(profile.data){
       let flag=false;
+      console.log("UseEffect 2a");
         for(let i=0;i<profile.data.userContestRankingHistory.length;i++){
           if(profile.data.userContestRankingHistory[i].contest.startTime===1632623400)
             flag=true;
