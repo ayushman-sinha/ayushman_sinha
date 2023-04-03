@@ -14,6 +14,8 @@ const Contactme = () => {
       }, (error) => {
           console.log(error.text);
       });
+      prompt('Email sent successfully');
+      window.location.reload();
   }
 
   return (
