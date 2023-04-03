@@ -37,6 +37,7 @@ const Coding = () => {
       //Fetch codeforces stats
       const response2 = await axios.get('https://ayushman-sinha-yc4d.vercel.app/api/routes/leetcode/codeforces').then((response2)=>{
         setProfile2(response2.data);     
+        console.log("Fetching Codeforces");
         //window.localStorage.setItem('codeforces',JSON.stringify(response2.data));      
       });
     }    
@@ -45,7 +46,7 @@ const Coding = () => {
   },[]);
   //Fire this useEffect only when profile is updated
   useEffect(() => {
-    console.log("UseEffect 2");
+    //console.log("UseEffect 2");
     if(profile.data){
       let flag=false;
         for(let i=0;i<profile.data.userContestRankingHistory.length;i++){
