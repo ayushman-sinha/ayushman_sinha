@@ -11,6 +11,10 @@ const AboutMe = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isHovered, setIsHovered] = useState(false);
 
+    const resumeClick = () => {
+        window.open('https://drive.google.com/file/d/1-PSu3YLhfOz6u8m-i44nWrWrNvDQkSHs/view?usp=share_link');
+    }
+
     // const [mousePos, setMousePos] = useState({});
 
     // useEffect(() => {
@@ -46,7 +50,7 @@ const AboutMe = () => {
                 I am pursuing my B. Tech from Siddaganga Institute of Tecnology, Tumakuru.  I am a full stack developer and a competitive coder.
                  My passion for coding started at a really young age.  I love to sing in my freetime.
             </div>
-            <button type='button' className='rectangle1' >
+            <button type='button' className='rectangle1' onClick={resumeClick} >
                 My Resume
             </button>
         </div>
