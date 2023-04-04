@@ -3,7 +3,7 @@ import './Coding.css'
 import { Lines } from 'react-preloaders';
 import axios from 'axios';
 import {Line} from 'react-chartjs-2'
-import {Chart as ChartJS, Title, Legend, LineController, LineElement, PointElement, LinearScale, CategoryScale, Tooltip} from 'chart.js/auto'
+import {Chart as ChartJS, Title, Legend, LineController, LineElement, PointElement, LinearScale, CategoryScale, Tooltip} from 'chart.js'
 ChartJS.register(Title, Legend, LineController, LineElement, PointElement, LinearScale, CategoryScale, Tooltip)
 
 
@@ -64,30 +64,30 @@ const Coding = () => {
             setRank((rank)=>[...rank,profile.data.userContestRankingHistory[i].ranking]);}
           
         }
-        setData(
-          {
-            labels:Yaxis,
-            datasets:[
-              {
-                label:"My Leetcode Ratings",
-                data:Xaxis,
-                backgroundColor:'false',
-                borderColor:'#fa1776',
-                tension:0.4,                              
-                pointStyle:'false',
-                pointBorderColor:'rgba(0, 0, 0, 0.01)',
-                pointBackgroundColor:'rgba(0, 0, 0, 0.01)',
-                showLine:true
-              }
-            ]
-          }
-        )
-       
+        setTimeout(() => {
+          setData(
+            {
+              labels:Yaxis,
+              datasets:[
+                {
+                  label:"My Leetcode Ratings",
+                  data:Xaxis,
+                  backgroundColor:'false',
+                  borderColor:'#fa1776',
+                  tension:0.4,                              
+                  pointStyle:'false',
+                  pointBorderColor:'rgba(0, 0, 0, 0.01)',
+                  pointBackgroundColor:'rgba(0, 0, 0, 0.01)',
+                  showLine:true
+                }
+              ]
+            }
+          )
+          
+        }, 2000);
+        
+    
     }
-    
-      
-   
-    
   }, [profile]);
 
   useEffect(() => {
@@ -116,7 +116,9 @@ const Coding = () => {
         }]
 
       })
+    
     }
+    
       
   }, [profile2]);
 
