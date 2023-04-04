@@ -64,29 +64,7 @@ const Coding = () => {
             setRank((rank)=>[...rank,profile.data.userContestRankingHistory[i].ranking]);}
           
         }
-        setTimeout(() => {
-          setData(
-            {
-              labels:Yaxis,
-              datasets:[
-                {
-                  label:"My Leetcode Ratings",
-                  data:Xaxis,
-                  backgroundColor:'false',
-                  borderColor:'#fa1776',
-                  tension:0.4,                              
-                  pointStyle:'false',
-                  pointBorderColor:'rgba(0, 0, 0, 0.01)',
-                  pointBackgroundColor:'rgba(0, 0, 0, 0.01)',
-                  showLine:true
-                }
-              ]
-            }
-          )
-          
-        }, 2000);
-        
-    
+       
     }
   }, [profile]);
 
@@ -122,7 +100,28 @@ const Coding = () => {
       
   }, [profile2]);
 
-
+useEffect(() => {
+  
+  setData(
+    {
+      labels:Yaxis,
+      datasets:[
+        {
+          label:"My Leetcode Ratings",
+          data:Xaxis,
+          backgroundColor:'false',
+          borderColor:'#fa1776',
+          tension:0.4,                              
+          pointStyle:'false',
+          pointBorderColor:'rgba(0, 0, 0, 0.01)',
+          pointBackgroundColor:'rgba(0, 0, 0, 0.01)',
+          showLine:true
+        }
+      ]
+    }
+  )
+//console.log(data)
+}, [profile]);
 
 
 
