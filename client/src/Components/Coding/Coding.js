@@ -9,12 +9,13 @@ ChartJS.register(Title, Legend, LineController, LineElement, PointElement, Linea
 
 const monthName = ["Jan","Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const Coding = () => {
+
   //Fetch Leetcode stats
   const[profile,setProfile]=useState([]);
-  const [Xaxis, setXaxis]=useState([]);
-  const [Yaxis, setYaxis]=useState([]);
-  const [contestName, setContestName]=useState([]);
-  const [rank, setRank]=useState([]);
+  const [Xaxis, setXaxis]=useState();
+  const [Yaxis, setYaxis]=useState();
+  const [contestName, setContestName]=useState();
+  const [rank, setRank]=useState();
   const [data, setData]= useState()
 
   //Fetch codeforces stats
@@ -25,6 +26,9 @@ const Coding = () => {
   const [rank2, setRank2]=useState([]);
   const [data2, setData2]= useState()
 
+// useEffect(() => {
+//   console.log("App rendered");
+// }, [])
 
 
   useEffect(()=>{
@@ -48,6 +52,10 @@ const Coding = () => {
   useEffect(() => {
     console.log("UseEffect 2");
     if(profile.data){
+      const xaxis = [];
+      const yaxis = [];
+      const contestNameArr = [];
+      const rankArr = [];
       let flag=false;
       console.log("UseEffect 2a");
         for(let i=0;i<profile.data.userContestRankingHistory.length;i++){
@@ -58,12 +66,40 @@ const Coding = () => {
             let date = new Date(profile.data.userContestRankingHistory[i].contest.startTime*1000);
             let newDate = monthName[date.getMonth()] + "," + date.getFullYear();
            
-            setXaxis((Xaxis)=>[...Xaxis,profile.data.userContestRankingHistory[i].rating]);            
-            setYaxis((Yaxis)=>[...Yaxis,newDate]);
-            setContestName((contestName)=>[...contestName,profile.data.userContestRankingHistory[i].contest.title]);
-            setRank((rank)=>[...rank,profile.data.userContestRankingHistory[i].ranking]);}
+            // setXaxis((Xaxis)=>[...Xaxis,profile.data.userContestRankingHistory[i].rating]);            
+            // setYaxis((Yaxis)=>[...Yaxis,newDate]);
+            // setContestName((contestName)=>[...contestName,profile.data.userContestRankingHistory[i].contest.title]);
+            // setRank((rank)=>[...rank,profile.data.userContestRankingHistory[i].ranking]);
+            xaxis.push(profile.data.userContestRankingHistory[i].rating);
+            yaxis.push(newDate);
+            contestNameArr.push(profile.data.userContestRankingHistory[i].contest.title);
+            rankArr.push(profile.data.userContestRankingHistory[i].ranking);
+          }
           
         }
+        setXaxis(xaxis);
+        setYaxis(yaxis);
+        setContestName(contestNameArr);
+        setRank(rankArr);
+        setData(
+          {
+            labels:yaxis,
+            datasets:[
+              {
+                label:"My Leetcode Ratings",
+                data:xaxis,
+                backgroundColor:'false',
+                borderColor:'#fa1776',
+                tension:0.4,                              
+                pointStyle:'false',
+                pointBorderColor:'rgba(0, 0, 0, 0.01)',
+                pointBackgroundColor:'rgba(0, 0, 0, 0.01)',
+                showLine:true
+              }
+            ]
+          }
+        )
+
        
     }
   }, [profile]);
@@ -100,28 +136,11 @@ const Coding = () => {
       
   }, [profile2]);
 
-useEffect(() => {
+// useEffect(() => {
   
-  setData(
-    {
-      labels:Yaxis,
-      datasets:[
-        {
-          label:"My Leetcode Ratings",
-          data:Xaxis,
-          backgroundColor:'false',
-          borderColor:'#fa1776',
-          tension:0.4,                              
-          pointStyle:'false',
-          pointBorderColor:'rgba(0, 0, 0, 0.01)',
-          pointBackgroundColor:'rgba(0, 0, 0, 0.01)',
-          showLine:true
-        }
-      ]
-    }
-  )
-//console.log(data)
-}, [data]);
+ 
+// //console.log(data)
+// }, [data]);
 
 
 
@@ -261,7 +280,7 @@ useEffect(() => {
   )
 }
 
-export default Coding
+export default Coding;
 /* 
  for(let i=0;i<profile.length;i++){
         console.log(profile[i].userContestRankingHistory[i].rating);
