@@ -106,20 +106,31 @@ const Coding = () => {
 
   useEffect(() => {
     if(profile2.length>0){
+      const xaxis2 = [];
+      const yaxis2 = [];
+      const contestNameArr2 = [];
+      const rankArr2 = [];
+
       for(let i=0;i<profile2[0].result.length;i++){
         let date = new Date(profile2[0].result[i].ratingUpdateTimeSeconds*1000);
         let newDate = monthName[date.getMonth()] + "," + date.getFullYear();
-        setXaxis2((Xaxis2)=>[...Xaxis2,profile2[0].result[i].newRating]);
-        setYaxis2((Yaxis2)=>[...Yaxis2,newDate]);
-        setContestName2((contestName2)=>[...contestName2,profile2[0].result[i].contestName]);
-        setRank2((rank2)=>[...rank2,profile2[0].result[i].rank]);
+        // setXaxis2((Xaxis2)=>[...Xaxis2,profile2[0].result[i].newRating]);
+        // setYaxis2((Yaxis2)=>[...Yaxis2,newDate]);
+        // setContestName2((contestName2)=>[...contestName2,profile2[0].result[i].contestName]);
+        // setRank2((rank2)=>[...rank2,profile2[0].result[i].rank]);
+
+        xaxis2.push(profile2[0].result[i].newRating);
+        yaxis2.push(newDate);
+        contestNameArr2.push(profile2[0].result[i].contestName);
+        rankArr2.push(profile2[0].result[i].rank);
+
       }
       setData2({
-        labels:Yaxis2,
+        labels:yaxis2,
         datasets:[{
           label:"My Codeforces Ratings",
           color: '#666',
-          data:Xaxis2,
+          data:xaxis2,
           backgroundColor:'none',
           borderColor:'#fa1776',
           tension:0.4,          
@@ -135,12 +146,6 @@ const Coding = () => {
     
       
   }, [profile2]);
-
-// useEffect(() => {
-  
- 
-// //console.log(data)
-// }, [data]);
 
 
 

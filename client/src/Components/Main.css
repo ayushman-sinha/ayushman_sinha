@@ -63,9 +63,13 @@ body{
     background: #555;
   }
   @media screen and (max-width: 768px) {
+    .blob1{
+       top:-500px;
+        left: 0px;
+    }
     
     .blob2{
-        display: none;
+        top:200px;
     }
   }
     

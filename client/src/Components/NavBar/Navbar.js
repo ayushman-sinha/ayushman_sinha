@@ -27,11 +27,11 @@ const Navbar = () => {
         </div>
         <div className={`nav-elements  ${showNavbar && 'active'}`}>
           <ul>
-            <li><NavLink to='/' style={({ isActive }) =>isActive ? activeStyle : undefined}>About Me</NavLink></li>
-            <li><NavLink to='/skills'  style={({ isActive }) =>isActive ? activeStyle : undefined}>Skills</NavLink></li>
-            <li><NavLink to='/projects'  style={({ isActive }) =>isActive ? activeStyle : undefined}>Projects</NavLink></li>
-            <li><NavLink to='/coding'  style={({ isActive }) =>isActive ? activeStyle : undefined}>Coding</NavLink></li>
-            <li><NavLink to='/contact'  style={({ isActive }) =>isActive ? activeStyle : undefined}>Contact Me</NavLink></li>
+            <li><NavLink to='/' style={({ isActive }) =>isActive ? activeStyle : undefined} onClick={handleShowNavbar}>About Me</NavLink></li>
+            <li><NavLink to='/skills'  style={({ isActive }) =>isActive ? activeStyle : undefined} onClick={handleShowNavbar}>Skills</NavLink></li>
+            <li><NavLink to='/projects'  style={({ isActive }) =>isActive ? activeStyle : undefined} onClick={handleShowNavbar}>Projects</NavLink></li>
+            <li><NavLink to='/coding'  style={({ isActive }) =>isActive ? activeStyle : undefined} onClick={handleShowNavbar}>Coding</NavLink></li>
+            <li><NavLink to='/contact'  style={({ isActive }) =>isActive ? activeStyle : undefined} onClick={handleShowNavbar}>Contact Me</NavLink></li>
           </ul>
         </div>
       </div>
