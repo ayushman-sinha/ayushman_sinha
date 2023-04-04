@@ -121,7 +121,7 @@ useEffect(() => {
     }
   )
 //console.log(data)
-}, [profile]);
+}, [data]);
 
 
 
