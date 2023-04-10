@@ -7,10 +7,24 @@ const Contactme = () => {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-    if(form.current.user_name.value === '' || form.current.user_phone.value === '' || form.current.user_email.value === '' || form.current.message.value === ''){
+    //Form validation
+
+    const name = document.getElementById('user_name').value;
+    const phone = document.getElementById('user_phone').value;
+    const email = document.getElementById('user_email').value;
+    const message = document.getElementById('message').value;
+
+    name= name.trim();
+    phone= phone.trim();
+    email= email.trim();
+    message= message.trim();
+
+    if(name.length === 0 || phone.length === 0 || email.length === 0 || message.length === 0){
       alert('Please fill all the fields');
       return;
     }
+
+
 
 
     emailjs.sendForm('service_ow4042l', 'template_xt1tnmp', form.current, 'U6QpvTKd4sWsVY4PY')
