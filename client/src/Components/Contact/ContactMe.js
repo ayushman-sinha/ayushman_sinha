@@ -9,20 +9,23 @@ const Contactme = () => {
     e.preventDefault();
     //Form validation
 
-    const name = document.getElementById('user_name').value;
-    const phone = document.getElementById('user_phone').value;
-    const email = document.getElementById('user_email').value;
-    const message = document.getElementById('message').value;
+    const name = form.current.user_name.value.trim();
+    const phone = form.current.user_phone.value.trim();
+    const email = form.current.user_email.value.trim();
+    const message = form.current.message.value.trim();
 
-    name= name.trim();
-    phone= phone.trim();
-    email= email.trim();
-    message= message.trim();
+    
 
     if(name.length === 0 || phone.length === 0 || email.length === 0 || message.length === 0){
       alert('Please fill all the fields');
       return;
     }
+    //Email validation
+    if(!email.includes('@') || !email.includes('.')){
+      alert('Please enter a valid email');
+      return;
+    }
+
 
 
 
