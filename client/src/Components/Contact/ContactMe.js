@@ -7,6 +7,12 @@ const Contactme = () => {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
+    if(form.current.user_name.value === '' || form.current.user_phone.value === '' || form.current.user_email.value === '' || form.current.message.value === ''){
+      alert('Please fill all the fields');
+      return;
+    }
+
+
     emailjs.sendForm('service_ow4042l', 'template_xt1tnmp', form.current, 'U6QpvTKd4sWsVY4PY')
       .then((result) => {
           console.log(result.text);
@@ -14,7 +20,7 @@ const Contactme = () => {
       }, (error) => {
           console.log(error.text);
       });
-      prompt('Email sent successfully');
+      alert('Email sent successfully');
       window.location.reload();
   }
 

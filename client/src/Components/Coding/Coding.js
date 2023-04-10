@@ -1,4 +1,4 @@
-import {useState,useEffect} from 'react'
+import {useState,useEffect,useRef} from 'react'
 import './Coding.css'
 import { Lines } from 'react-preloaders';
 import axios from 'axios';
@@ -26,6 +26,8 @@ const Coding = () => {
   const [rank2, setRank2]=useState([]);
   const [data2, setData2]= useState()
 
+  const chartRef = useRef();
+
 // useEffect(() => {
 //   console.log("App rendered");
 // }, [])
@@ -42,6 +44,12 @@ const Coding = () => {
       const response2 = await axios.get('https://ayushman-sinha-yc4d.vercel.app/api/routes/leetcode/codeforces').then((response2)=>{
         setProfile2(response2.data);     
         console.log("Fetching Codeforces");
+
+        
+
+        
+
+
         //window.localStorage.setItem('codeforces',JSON.stringify(response2.data));      
       });
     }    
