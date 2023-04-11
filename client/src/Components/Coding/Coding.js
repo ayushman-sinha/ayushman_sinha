@@ -26,7 +26,7 @@ const Coding = () => {
   const [rank2, setRank2]=useState([]);
   const [data2, setData2]= useState()
 
-  const chartRef = useRef();
+  
 
 // useEffect(() => {
 //   console.log("App rendered");
