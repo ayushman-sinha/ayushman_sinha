@@ -38,7 +38,7 @@ const Coding = () => {
       // Fetch Leetcode stats
       let leetcodeData = JSON.parse(localStorage.getItem('leetcode'));
       const leetcodeTimestamp = localStorage.getItem('leetcodeTimestamp');
-      if (!leetcodeData || Date.now() - leetcodeTimestamp >30000) {
+      if (!leetcodeData || Date.now() - leetcodeTimestamp >300000) {
         const response = await axios.get('https://ayushman-sinha-yc4d.vercel.app/api/routes/leetcode');
         leetcodeData = response.data;
         localStorage.setItem('leetcode', JSON.stringify(response.data));
@@ -49,7 +49,7 @@ const Coding = () => {
       // Fetch Codeforces stats
       let codeforcesData = JSON.parse(localStorage.getItem('codeforces'));
       const codeforcesTimestamp = localStorage.getItem('codeforcesTimestamp');
-      if (!codeforcesData || Date.now() - codeforcesTimestamp > 30000) {
+      if (!codeforcesData || Date.now() - codeforcesTimestamp > 300000) {
         const response2 = await axios.get('https://ayushman-sinha-yc4d.vercel.app/api/routes/leetcode/codeforces');
         codeforcesData = response2.data;
         localStorage.setItem('codeforces', JSON.stringify(response2.data));
