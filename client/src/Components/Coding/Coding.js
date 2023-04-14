@@ -34,27 +34,31 @@ const Coding = () => {
 
 
   useEffect(()=>{
-    const getProfile=async()=>{
-      //Fetch Leetcode stats
-      const response=await axios.get('https://ayushman-sinha-yc4d.vercel.app/api/routes/leetcode').then((response)=>{
-        setProfile(response.data); 
-       // window.localStorage.setItem('leetcode',JSON.stringify(response.data));
-      });
-      //Fetch codeforces stats
-      const response2 = await axios.get('https://ayushman-sinha-yc4d.vercel.app/api/routes/leetcode/codeforces').then((response2)=>{
-        setProfile2(response2.data);     
-        console.log("Fetching Codeforces");
-
-        
-
-        
-
-
-        //window.localStorage.setItem('codeforces',JSON.stringify(response2.data));      
-      });
-    }    
+    const getProfile = async () => {
+      // Fetch Leetcode stats
+      let leetcodeData = JSON.parse(localStorage.getItem('leetcode'));
+      const leetcodeTimestamp = localStorage.getItem('leetcodeTimestamp');
+      if (!leetcodeData || Date.now() - leetcodeTimestamp >30000) {
+        const response = await axios.get('https://ayushman-sinha-yc4d.vercel.app/api/routes/leetcode');
+        leetcodeData = response.data;
+        localStorage.setItem('leetcode', JSON.stringify(response.data));
+        localStorage.setItem('leetcodeTimestamp', Date.now());
+      }
+      setProfile(leetcodeData);
+    
+      // Fetch Codeforces stats
+      let codeforcesData = JSON.parse(localStorage.getItem('codeforces'));
+      const codeforcesTimestamp = localStorage.getItem('codeforcesTimestamp');
+      if (!codeforcesData || Date.now() - codeforcesTimestamp > 30000) {
+        const response2 = await axios.get('https://ayushman-sinha-yc4d.vercel.app/api/routes/leetcode/codeforces');
+        codeforcesData = response2.data;
+        localStorage.setItem('codeforces', JSON.stringify(response2.data));
+        localStorage.setItem('codeforcesTimestamp', Date.now());
+      }
+      setProfile2(codeforcesData);
+    };
+    
     getProfile();
-   
   },[]);
   //Fire this useEffect only when profile is updated
   useEffect(() => {
