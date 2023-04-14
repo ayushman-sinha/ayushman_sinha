@@ -12,7 +12,7 @@ const AboutMe = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     const resumeClick = () => {
-        window.open('https://drive.google.com/file/d/1-PSu3YLhfOz6u8m-i44nWrWrNvDQkSHs/view?usp=share_link');
+        window.open('https://drive.google.com/file/d/1XLS8P3KM7tdJS5FPWJbK9kQK5R4aKnYn/view?usp=sharing');
     }
 
     // const [mousePos, setMousePos] = useState({});

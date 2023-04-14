@@ -45,7 +45,7 @@ const Projects = () => {
                 <img src={pic3} alt='pic3' className='inner_img'/>
             </div>
             <div className='project_container_description'>
-                <h1><a href='https://ayushman-sinha.github.io/todolist/</h1>' target='_blank'> To-Do Application </a></h1>
+                <h1><a href='https://todolist-one-gold.vercel.app/' target='_blank'> To-Do Application </a></h1>
                 <p>A simple to-do application built using React and Redux. Users can add, edit, and delete to-do items.
                  This application uses local storage to store the to-do items and is fully responsive.</p>
             </div>

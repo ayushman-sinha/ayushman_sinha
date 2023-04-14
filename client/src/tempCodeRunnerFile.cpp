@@ -1,20 +1,16 @@
-#include <bits/stdc++.h>
-using namespace std;
-int main(){
-    int t;
-    cin>>t;
-    while(t--){
-        int a,b,c,d;
-        cin>>a>>b>>c>>d;
-        if(b>d){
-            cout<<"-1"<<endl;
-            continue;
-        }
-        int x=a+d-b;
-        if(x<c){
-            cout<<"-1"<<endl;
-            continue;
-        }
-        x=(d-b)+abs(x-c);
-        cout<<x<<endl;
+class Solution {
+public:
+    int maxi=INT_MIN;
+    int calc(TreeNode *root){
+         if(!root)
+            return 0;
+        int l=max(calc(root->left),0);
+        int r=max(calc(root->right),0);
+        maxi=max(maxi,l+r+root->val);
+        return  max(l+root->val,r+root->val);
     }
+    int maxPathSum(TreeNode* root) {
+       calc(root);
+        return maxi;
+    }
+};
