@@ -1,0 +1,3 @@
+{
+  "url": "https://leetcode.com/graphql?query=query{userContestRanking(username: \"ayushman_sinha\") {attendedContestsCount rating globalRanking totalParticipants topPercentage}userContestRankingHistory(username: \"ayushman_sinha\") {attended trendDirection problemsSolved totalProblems finishTimeInSeconds rating ranking contest {title startTime}}recentSubmissionList(username:\"ayushman_sinha\") {title titleSlug timestamp statusDisplay lang __typename}matchedUser(username: \"ayushman_sinha\"){submitStats: submitStatsGlobal {acSubmissionNum {difficulty count submissions __typename}totalSubmissionNum {difficulty count submissions __typename}__typename}}}"
+}
