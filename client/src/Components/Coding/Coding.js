@@ -7,6 +7,10 @@ import {Chart as ChartJS, Title, Legend, LineController, LineElement, PointEleme
 ChartJS.register(Title, Legend, LineController, LineElement, PointElement, LinearScale, CategoryScale, Tooltip)
 
 
+
+
+const httpClient = axios.create();
+httpClient.defaults.timeout = 1500;
 const monthName = ["Jan","Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const Coding = () => {
 
