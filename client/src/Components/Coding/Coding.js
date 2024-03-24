@@ -258,7 +258,7 @@ const Coding = () => {
   }
   return (
     <div className='main_container_coding'> 
-      {profile.data&&profile2.length>0?<div className='main_container_coding_inner'>
+      {profile.data?<div className='main_container_coding_inner'>
       <div className='leetcode_container'>
             <div className='leetcode_heading'>Leetcode</div>
               {data&&<Line data={data} options={options}/>}  
@@ -278,14 +278,14 @@ const Coding = () => {
               </div>
 
     </div>
-    <div className='codeforces_container'>
+{/* <div className='codeforces_container'>
             <div className='leetcode_heading'>Codeforces</div>
             {data2&&<Line data={data2} options={options2}/>}
             <div className='codeforces_description'>
                   <div className='left_column_codeforces'>
                     <div className='leetcode_stats_label'>Current Rating : <div className='leetcode_stats_text'> {profile2.length>0?profile2[1].result[0].rating:<></>}</div></div>
                     <div className='leetcode_stats_label'>Rank : <div className='leetcode_stats_text'> {profile2.length>0?profile2[1].result[0].rank:<></>} </div></div>
-                    <div className='leetcode_stats_label'>Maximum Rating : <div className='leetcode_stats_text'> {profile2.length>0?profile2[1].result[0].maxRating:<></>}</div></div>
+                        <div className='leetcode_stats_label'>Maximum Rating : <div className='leetcode_stats_text'> {profile2.length>0?profile2[1].result[0].maxRating:<></>}</div></div>
                     <div className='leetcode_stats_label'>Maximum Rank : <div className='leetcode_stats_text'> {profile2.length>0?profile2[1].result[0].maxRank:<></>}</div></div>
                   </div>
                   <div className='right_column_codeforces'>
@@ -295,7 +295,7 @@ const Coding = () => {
                     <div className='leetcode_stats_label'>Friend of Count : <div className='leetcode_stats_text'> {profile2.length>0?profile2[1].result[0].friendOfCount:<></>}</div></div>
                   </div>
             </div>
-    </div>   
+    </div>    */}
       </div>:<div className='loading_text'>Loading....</div>}
     </div>
   )
